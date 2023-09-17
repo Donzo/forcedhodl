@@ -7,7 +7,7 @@ Check out a [DEMO VIDEO HERE](https://youtu.be/jHUE4sS064E).
 
 
 ## Useful Links
-[Forced Hodl Website]([https://pages.github.com/](https://forcedhodl.com/))
+[Forced Hodl Website](https://forcedhodl.com/)
 
 
 [Early Version of Forced HODL NFT Minted on Arbitrum Goerli](https://testnets.opensea.io/assets/arbitrum-goerli/0x1b19c9cae807f4f4010ffb4f9c923ce9c6995114/0)
