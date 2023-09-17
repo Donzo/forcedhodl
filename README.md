@@ -13,5 +13,5 @@ Check out a [DEMO VIDEO HERE](https://youtu.be/jHUE4sS064E).
 [Early Version of Forced HODL NFT Minted on Arbitrum Goerli](https://testnets.opensea.io/assets/arbitrum-goerli/0x1b19c9cae807f4f4010ffb4f9c923ce9c6995114/0)
 
 
-Onchain Metadata for NFT
+Onchain Metadata for NFT (Remove Quotes and Put in URL to See JSON Stored in TOKEN URI)
 "data:application/json;base64,eyJuYW1lIjogIkZvcmNlZCBIT0RMIFdhbGxldCAjMCIsImRlc2NyaXB0aW9uIjogIkZvcmNlZCBIT0RMIE5GVCIsImV4dGVybmFsX3VybCI6ICJodHRwczovL2ZvcmNlZGhvZGwuY29tLyIsImltYWdlIjogImh0dHBzOi8vZm9yY2VkaG9kbC5jb20vbG9nby5wbmciLCJhdHRyaWJ1dGVzIjpbeyJ0cmFpdF90eXBlIjogIk1hdHVyaXR5IERhdGUiLCJ2YWx1ZSI6ICI3LzcvMjA3NyJ9XX0="
