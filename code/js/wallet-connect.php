@@ -1,7 +1,6 @@
 <script>
-	//This second wallet connect file is used with the BUY CARDS page
 		//NFT MINTER ADDRESS
-		var tokenContract = '0x3646d122335f75f0C0C2F389B11eE1fc0C407Cf2';	
+		var tokenContract = '0x1B19c9Cae807f4f4010FfB4f9c923CE9c6995114';	
 		
 		async function connectMyWallet() {
 			
@@ -15,9 +14,8 @@
 			
 			const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 			const account = accounts[0];
-			
 			//watchToken();
-		
+			console.log('1');
 			if (account){
 				window['userAccountNumber'] = account;
 			}
@@ -68,6 +66,9 @@
   			else if (chainId == "0xa4b1" || provider == 42161){
   				networkName = "arbitrum";
   			}
+  			else if (chainId == "0x66eed" || provider == 421613){
+  				networkName = "arbiGoerli";
+  			}
   			else if (window.ethereum) {
   		 		chainId = window.ethereum.chainId;
   		 		networkName = "Ethereum?";
@@ -78,12 +79,13 @@
   			
   			console.log('User is on ' + networkName + ' with ID number ' + provider + ' and chainid ' + chainId + '.');
   			
-  			if (chainId == "0x5" && provider == 5){
-  				checkIfUserHasPacks();
+  			if (chainId == "0x66eed" && provider == 421613){
+  				console.log('2');
+  				mintMyNFT();
 			}	
   			else{
-  				//Get on Goerli
-  				switchNetwork(7);
+  				//Get on Arbi Goerli
+  				switchNetwork(8);
   			}
   			
   			
@@ -93,7 +95,7 @@
 			var theChainID = '0x89';
 			var theRPCURL = 'https://polygon-rpc.com';
 			var nn = false;
-			
+			console.log('3');
 			if (which == 1){
 				//AVAX
 				theChainID = '0xa86a';
@@ -136,7 +138,14 @@
 				theRPCURL = 'https://goerli.infura.io/v3/';
 				nn = 'goerli';
 			}
-			
+			else if (which == 8){
+				//Arbitrum Goerli
+				theChainID = '0x66eed';
+				theRPCURL = 'https://arbitrum-goerli.publicnode.com';
+				nn = 'arbi goerli';
+				mintMyNFT();
+				
+			}
 			try {
 					await window.ethereum.request({
 						method: 'wallet_switchEthereumChain',
@@ -159,5 +168,22 @@
 					}
 				}
 			}
+		}
+		async function mintMyNFT(){
+			console.log('4');
+			var rAddress = document.getElementById('mintAddress').value;
+			console.log(rAddress);
+			//First Check Allowance
+			let web3 = new Web3(Web3.givenProvider);
+				
+			var contract = new web3.eth.Contract(abi1, tokenContract, {});
+			const approveAmount = await contract.methods.safeMint(rAddress).send({
+				from: window['userAccountNumber']
+			}).on('transactionHash', function(hash){
+				console.log('NFT Minting')
+			}).on('receipt', function(receipt){
+				alert('NFT Minted');
+			});
+			
 		}
 	</script>
