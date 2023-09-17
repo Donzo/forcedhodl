@@ -10,9 +10,11 @@ Check out a [DEMO VIDEO HERE](https://youtu.be/jHUE4sS064E).
 [Forced Hodl Website](https://forcedhodl.com/)
 
 
+[Verified NFT Smartcontract](https://goerli.arbiscan.io/address/0x1b19c9cae807f4f4010ffb4f9c923ce9c6995114#writeContract)
+
+
 [Early Version of Forced HODL NFT Minted on Arbitrum Goerli](https://testnets.opensea.io/assets/arbitrum-goerli/0x1b19c9cae807f4f4010ffb4f9c923ce9c6995114/0)
 
-[Verified NFT Smartcontract](https://goerli.arbiscan.io/address/0x1b19c9cae807f4f4010ffb4f9c923ce9c6995114#writeContract)
 
 
 Onchain Metadata for NFT (Remove Quotes and Put in URL to See JSON Stored in TOKEN URI)
